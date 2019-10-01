@@ -18,3 +18,7 @@ class Text(GenericLocatorWidget):
 
     def read(self):
         return self.text
+
+    @property
+    def href(self):
+        return self.browser.get_attribute("href", self)
